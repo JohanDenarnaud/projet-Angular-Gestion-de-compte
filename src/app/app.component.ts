@@ -23,8 +23,8 @@ export class AppComponent {
   }
 
   ngOnInit() {// chargement des données à l'ouverture
-    const today = new Date();
-    this.mois = today.getMonth() + 1;
+    
+   
     this.loadBdd();
     this.loadCatBdd();
     this.onFiltrerMois();
@@ -157,6 +157,7 @@ export class AppComponent {
       }
 
     }
+    depenseReelle = Math.round(depenseReelle*10)/10;
     return depenseReelle;
   }
 
